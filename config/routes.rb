@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   #   get 'products/:id' => 'catalog#view'
   # get '/'
   # resources :actors
-  get 'index', to: 'actors#index'
+  get 'actors', to: 'actors#index'
   get 'crear', to: "actors#crear"
   post 'create', to: "actors#create"
   # post 'create', to: "actors#create"
