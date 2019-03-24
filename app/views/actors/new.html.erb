@@ -1,35 +1,36 @@
 <h1> Crear actor </h1>
 
 <%= form_for @actor do |a| %>
-<div>
-  <p>
-    <%= a.label :name %><br>
-    <%= a.text_field :name %>
-  </p>
+  <div>
+    <p>
+      <%= a.label :name %><br>
+      <%= a.text_field :name %>
+    </p>
 
-  <p>
-    <%= a.label :bio %><br>
-    <%= a.text_area :bio %>
-  </p>
+    <p>
+      <%= a.label :bio %><br>
+      <%= a.text_area :bio %>
+    </p>
 
-  <p>
-    <%= a.label :birth_date %><br>
-    <%= a.date_field :birth_date %>
-  </p>
+    <p>
+      <%= a.label :birth_date %><br>
+      <%= a.date_field :birth_date %>
+    </p>
 
-  <p>
-    <%= a.label :birth_place %><br>
-    <%= a.text_field :birth_place %>
-  </p>
-  
-  <p>
-    <%= a.label :image_url %><br>
-    <%= a.text_field :image_url %>
-  </p>
+    <p>
+      <%= a.label :birth_place %><br>
+      <%= a.text_field :birth_place %>
+    </p>
 
-  <p>
+    <p>
+      <%= a.label :image_url %><br>
+      <%= a.text_field :image_url %>
+    </p>
+
+    <p>
     <%= a.submit %>
-  </p>
+    </p>
 
   </div>
+
 <% end %> 

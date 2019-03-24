@@ -1,5 +1,5 @@
 class ActorsController < ApplicationController
- skip_before_action:verify_authenticity_token
+#  skip_before_action:verify_authenticity_token
 
   def index
     @actors = Actor.all
@@ -10,8 +10,8 @@ class ActorsController < ApplicationController
   end
 
   def create
-    @actors = Actor.new(params[actor_params])
-    if @actors.save
+    @actor = Actor.new(actor_params)
+    if @actor.save
       redirect_to actors_path
 		else
 			render :new
@@ -20,7 +20,7 @@ class ActorsController < ApplicationController
 
 	private
   	def actor_params
-    	params.require(:actor).permit(:image_url, :name, :bio, :birth_date, :birth_place)
+    	params.require(:actor).permit(:name, :bio, :birth_date, :birth_place, :image_url)
   	end
 
 end
