@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   # get '/'
   # resources :actors
   get 'actors', to: 'actors#index'
+  get 'actors/new', to: 'actors#new'
   get 'crear', to: "actors#crear"
   post 'create', to: "actors#create"
   # post 'create', to: "actors#create"
