@@ -1,12 +1,7 @@
 <h1> Crear actor </h1>
 
-<%= form_for @actors do |a| %>
+<%= form_for @acto do |a| %>
 <div>
-  <p>
-    <%= a.label :image_url %><br>
-    <%= a.text_field :image_url %>
-  </p>
-
   <p>
     <%= a.label :name %><br>
     <%= a.text_field :name %>
@@ -26,9 +21,15 @@
     <%= a.label :birth_place %><br>
     <%= a.text_field :birth_place %>
   </p>
+  
+  <p>
+    <%= a.label :image_url %><br>
+    <%= a.text_field :image_url %>
+  </p>
 
   <p>
     <%= a.submit %>
   </p>
+
   </div>
 <% end %> 

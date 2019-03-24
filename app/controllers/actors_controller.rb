@@ -6,12 +6,12 @@ class ActorsController < ApplicationController
   end
 
   def new
-    @actors = Actor.new
+    @actor = Actor.new
   end
 
   def create
-    @actors = Actor.new(name: params[:name], bio: params[:bio], birth_date: params[:birth_date],  birth_place: params[:birth_place],image_url: params[:image_url])
-    if @actors.save
+    @actor = Actor.new(params[:acto])
+    if @actor.save
       redirect_to actors_path
 		else
 			render :new
