@@ -1,11 +1,34 @@
 <h1> Crear actor </h1>
 
-<form class="forms" action="/create" method="post">
-  <label for="photo">Url Photo:</label><textarea rows="1" cols="110" type="text" name="new_actor_photo" id="photo"></textarea>
-  <label for="name">Name:</label><input type="text" name="new_actor_name" id="name">
-  <label for="bio">Bio:</label><textarea rows="5" cols="10" type="text" name="new_actor_bio" id="bio"></textarea>
-  <label for="birth_date">Birth date:</label><input type="text" name="new_actor_bd" id="birth_date">
-  <label for="birth_place">Birth place:</label><input type="text" name="new_actor_bp" id="birth_place">
-  <label for="save"></label> <input type="Submit" value="Guardar" id="save">
-</form> 
+<%= form_for @actor do |a| %>
+<div>
+  <p>
+    <%= a.label :image_url %><br>
+    <%= a.text_field :image_url %>
+  </p>
 
+  <p>
+    <%= a.label :name %><br>
+    <%= a.text_field :name %>
+  </p>
+
+  <p>
+    <%= a.label :bio %><br>
+    <%= a.text_area :bio %>
+  </p>
+
+  <p>
+    <%= a.label :birth_date %><br>
+    <%= a.date_field :birth_date %>
+  </p>
+
+  <p>
+    <%= a.label :birth_place %><br>
+    <%= a.text_field :birth_place %>
+  </p>
+
+  <p>
+    <%= a.submit %>
+  </p>
+  </div>
+<% end %> 
